@@ -34,30 +34,6 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-
-  <script>
-    // Function to randomly shuffle the first two authors
-    function shuffleFirstTwoAuthors() {
-      var authorContainer = document.querySelector('.publication-authors');
-      var authorBlocks = authorContainer.querySelectorAll('.author-block');
-
-      // Get references to the first two author spans
-      var author1 = authorBlocks[0];
-      var author2 = authorBlocks[1];
-
-      // Determine the order based on a random coin flip (0 or 1)
-      var coinFlip = Math.floor(Math.random() * 2);
-
-      // Swap the order of the first two authors if coinFlip is 1
-      if (coinFlip === 1) {
-        authorContainer.insertBefore(author2, author1);
-      }
-    }
-
-    // Call the shuffle function when the page loads
-    window.onload = shuffleFirstTwoAuthors;
-
-  </script>
 </head>
 
 <body>
@@ -72,13 +48,13 @@
     </div>
     <div class="navbar-menu">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <a class="navbar-item" href="https://concept-graphs.github.io">
+        <a class="navbar-item" href="https://egolifter.github.io/">
           <span class="icon">
             <i class="fas fa-home"></i>
           </span>
         </a>
 
-        <div class="navbar-item has-dropdown is-hoverable">
+        <!-- <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
             Related Research
           </a>
@@ -93,7 +69,7 @@
               SayPlan
             </a>
           </div>
-        </div>
+        </div> -->
       </div>
 
     </div>
@@ -105,87 +81,40 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">ConceptGraphs: Open-Vocabulary 3D Scene Graphs for Perception and
-              Planning</h1>
+            <h1 class="title is-2 publication-title">EgoLifter: Open-world 3D Segmentation for Egocentric Perception</h1>
             <h2 class="title is-6 publlication-title">Preprint</h2>
             <div class="is-size-6 publication-authors">
               <span class="author-block">
-                <a href="https://georgegu1997.github.io/"><i>Qiao Gu</i></a> <sup>3</sup><sup>*</sup>,
+                <a href="https://georgegu1997.github.io/"><i>Qiao Gu</i></a> <sup>1,2</sup>,
               </span>
               <span class="author-block">
-                <a href="https://www.alihkw.com/"><i>Alihusein
-                      Kuwajerwala</i></a> <sup>2</sup><sup>*</sup>,
+                <a href="https://lvzhaoyang.github.io/"><i>Zhaoyang Lv</i></a> <sup>2</sup>,
               </span>
               <span class="author-block">
-                <a href="https://sachamorin.github.io/"><i>Sacha Morin</i></a> <sup>2</sup><sup>*</sup>,
+                <a href="https://scholar.google.com/citations?user=P9l4zHIAAAAJ&hl=en"><i>Duncan Frost</i></a> <sup>1,2</sup>,
               </span>
               <span class="author-block">
-                <a href="https://krrish94.github.io"><i>Krishna Murthy Jatavallabhula</i></a> <sup>1</sup><sup>*</sup>,
-              </span>
-              <br>
-              <span class="author-block">
-                <a href="https://bipashasen.github.io/">Bipasha Sen</a><sup>2</sup>,
+                <a href="https://scholar.google.com/citations?user=VmHZtsEAAAAJ&hl=en"><i>Simon Green</i></a> <sup>1,2</sup>,
               </span>
               <span class="author-block">
-                <a href="https://skymanaditya1.github.io/">Aditya Agarwal</a><sup>2</sup>,
+                <a href="https://people.csail.mit.edu/jstraub/"><i>Julian Straub</i></a> <sup>1,2</sup>,
               </span>
               <span class="author-block">
-                <a
-                  href="https://www.jhuapl.edu/work/our-organization/research-and-exploratory-development/red-staff-directory/corban-rivera">Corban
-                  Rivera</a><sup>5</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=92bmh84AAAAJ">William Paul</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://mila.quebec/en/person/kirsty-ellis/">Kirsty Ellis</a><sup>2</sup>,
-              </span>
-              <br>
-              <span class="author-block">
-                <a href="https://engineering.jhu.edu/faculty/rama-chellappa/">Rama Chellappa</a><sup>6</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://people.csail.mit.edu/ganchuang/">Chuang Gan</a><sup>7</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://celsodemelo.net/">Celso Miguel de Melo</a><sup>8</sup>,
-              </span>
-              <br>
-              <span class="author-block">
-                <a href="http://web.mit.edu/cocosci/josh.html">Joshua B. Tenenbaum</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://groups.csail.mit.edu/vision/torralbalab/">Antonio Torralba</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="http://www.cs.toronto.edu/\~florian/">Florian Shkurti</a><sup>3</sup>,
-              </span>
-              <span class="author-block">
-                <a href="http://liampaull.ca">Liam Paull</a><sup>2</sup>
+                <a href="https://scholar.google.com/citations?user=h-CpQGgAAAAJ&hl=en"><i>Chris Sweeney</i></a> <sup>1,2</sup>,
               </span>
             </div>
 
             <div class="is-size-6 publication-authors">
-              <span class="author-block"><sup>1</sup>MIT,</span>
-              <span class="author-block"><sup>2</sup>Université de Montréal,</span>
-              <span class="author-block"><sup>3</sup>University of Toronto,</span>
-              <span class="author-block"><sup>4</sup>IIIT Hyderabad,</span>
-              <span class="author-block"><sup>5</sup>JHU APL,</span>
-              <span class="author-block"><sup>6</sup>JHU,</span>
-              <span class="author-block"><sup>7</sup>UMass Amherst,</span>
-              <span class="author-block"><sup>8</sup>DEVCOM Army Research Laboratory</span>
+              <span class="author-block"><sup>1</sup>University of Toronto,</span>
+              <span class="author-block"><sup>2</sup>Meta Reality Labs</span>
               <br>
-            </div>
-
-            <div class="is-size-7 publication-authors">
-              <span class="author-block"><sup>*</sup>Equal contribution</span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="assets/pdf/2023-ConceptGraphs.pdf" class="external-link button is-normal ">
+                  <a href="assets/pdf/_ECCV2024_EgoLifter.pdf" class="external-link button is-normal">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -193,7 +122,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="http://arxiv.org/abs/2309.16650" class="external-link button is-normal ">
+                  <a href="#" class="external-link button is-normal" disabled="true">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -202,7 +131,7 @@
                 </span>
                 <!-- Video Link. -->
                 <span class="link-block">
-                  <a href="https://youtu.be/mRhNkQwRYnc" class="external-link button is-normal ">
+                  <a href="#" class="external-link button is-normal" disabled="true">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
                     </span>
@@ -211,7 +140,7 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/concept-graphs/concept-graphs" class="external-link button is-normal ">
+                  <a href="#" class="external-link button is-normal" disabled="true">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -231,18 +160,17 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <video id="teaser" autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/splash.mp4" type="video/mp4">
+          <source src="./static/videos/eccv24-egolifter-teaser-animate-compress.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle has-text-centered">
-          <span class="coolname">ConceptGraphs</span> builds open-vocabulary 3D scenegraphs that enable a broad range of
-          perception and task planning capabilities.
+          <span class="coolname">EgoLifter</span> builds 
         </h2>
       </div>
     </div>
   </section>
 
 
-  <section class="hero is-light is-small">
+  <!-- <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
         <div id="results-carousel" class="carousel results-carousel">
@@ -309,7 +237,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <section class="section">
@@ -334,23 +262,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              For robots to perform a wide variety of tasks, they require a 3D representation of the world that is
-              semantically rich, yet compact and efficient for task-driven perception and planning.
-              Recent approaches have attempted to leverage features from large vision-language models to encode
-              semantics in 3D representations.
-              However, these approaches tend to produce maps with per-point feature vectors, which do not scale well in
-              larger environments, nor do they contain semantic spatial relationships between entities in the
-              environment, which are useful for downstream planning.
-              In this work, we propose <span class="coolname">ConceptGraphs</span>, an open-vocabulary graph-structured
-              representation for 3D scenes.
-              <span class="coolname">ConceptGraphs</span> is built by leveraging 2D foundation models and fusing their
-              output to 3D by multi-view
-              association.
-              The resulting representations generalize to novel semantic classes, without the need to collect large 3D
-              datasets or finetune models.
-              We demonstrate the utility of this representation through a number of downstream planning tasks that are
-              specified through abstract (language) prompts and require complex reasoning over spatial and semantic
-              concepts.
+              In this paper we present <span class="coolname">EgoLifter</span>, a novel system that can automatically segment scenes captured from egocentric sensors into a complete decomposition of individual 3D objects. The system is specifically designed for egocentric data where scenes contain hundreds of objects captured from natural (non-scanning) motion. <span class="coolname">EgoLifter</span> adopts 3D Gaussians as the underlying representation of 3D scenes and objects and uses segmentation masks from the Segment Anything Model (SAM) as weak supervision to learn flexible and promptable definitions of object instances free of any specific object taxonomy. To handle the challenge of dynamic objects in ego-centric videos, we design a transient prediction module that learns to filter out dynamic objects in the 3D reconstruction. The result is a fully automatic pipeline that is able to reconstruct 3D object instances as collections of 3D Gaussians that collectively compose the entire scene. We created a new benchmark on the Aria Digital Twin dataset that quantitatively demonstrates its state-of-the-art performance in open-world 3D segmentation from natural egocentric input. We run <span class="coolname">EgoLifter</span> on various egocentric activity datasets which shows the promise of the method for 3D egocentric perception at scale.
             </p>
           </div>
         </div>
@@ -369,14 +281,10 @@
           <h2 class="title is-3">Approach</h2>
           <div class="content has-text-justified">
             <p>
-              <span class="coolname">ConceptGraphs</span> builds an open-vocabulary 3D scene graph from a sequence of
-              posed RGB-D images. We use generic instance segmentation models to segment regions from RGB images,
-              extract semantic feature vectors for each, and project them to a 3D point cloud. These regions are
-              incrementally associated and fused from multiple views, resulting in a set of 3D objects and associated
-              vision (and language) descriptors. Then large vision and language models are used to caption each mapped
-              3D objects and derive inter-object relations, which generates the edges to connect the set of objects and
-              form a graph. The resulting 3D scene graph provides a structured and comprehensive understanding of the
-              scene and can further be easily translated to a text description, useful for LLM-based task planning.
+              <span class="coolname">EgoLifter</span> solves 3D reconstruction and open-world segmentation simultaneously from egocentric videos. <span class="coolname">EgoLifter</span> augments 3D Gaussian Splatting with instance features and lifts open-world 2D segmentation by contrastive learning, where 3D Gaussians belong to the same objects are learned to have similar features. In this way, <span class="coolname">EgoLifter</span> solves the multi-view mask association problem and establishes a consistent 3D representation that can be decomposed into object instances. 
+            </p>
+            <p>
+              Naive 3D reconstruction from egocentric videos creates a lot of "floaters" in the reconstruction and leads to blurry rendered images and erroneous instance features (bottom right). <span class="coolname">EgoLifter</span> tackles this problem using a transient prediction network, which predicts a probability mask of transient objects in the image and guides the reconstruction process. In this way, <span class="coolname">EgoLifter</span> gets a much cleaner reconstruction of the static background in both RGB and feature space (top right), which in turn leads to better object decomposition of 3D scenes. 
             </p>
             <img src="./static/images/pipeline.png" />
           </div>
@@ -385,9 +293,7 @@
       </div>
 
 
-      <div class="columns is-centered">
-
-        <!-- Relocalization (particle filter) -->
+      <!-- <div class="columns is-centered">
         <div class="column">
           <div class="content">
             <h2 class="title is-3">Re-localization</h2>
@@ -405,9 +311,7 @@
             </p>
           </div>
         </div>
-        <!--/ Relocalization (particle filter) -->
 
-        <!-- Text queries via CLIP / GPT-4 -->
         <div class="column">
           <h2 class="title is-3">Text queries via CLIP or GPT-4</h2>
           <div class="columns is-centered">
@@ -428,19 +332,16 @@
 
           </div>
         </div>
-      </div>
-      <!--/ Long-tailed concepts -->
+      </div> -->
 
     </div>
   </section>
 
 
-  <section class="section">
+  <!-- <section class="section">
     <div class="container is-max-desktop">
-      <!-- <h2 class="title is-3">Queries with both text and image context</h2> -->
       <div class="columns is-centered">
 
-        <!-- text + image -->
         <div class="column">
           <div class="content">
             <h3 class="title is-3">Queries with both text and image context</h3>
@@ -454,9 +355,7 @@
             </p>
           </div>
         </div>
-        <!--/ text + image -->
 
-        <!-- traversability -->
         <div class="column">
           <h3 class="title is-3">Traversability puzzle</h3>
           <div class="columns is-centered">
@@ -476,14 +375,12 @@
           </div>
         </div>
       </div>
-      <!--/ traversability -->
     </div>
-  </section>
+  </section> -->
 
 
-  <section class="section" id="concurrent work">
+  <!-- <section class="section" id="concurrent work">
     <div class="container is-max-desktop content">
-      <!-- Concurrent Work. -->
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-3">Concurrent work</h2>
@@ -516,13 +413,12 @@
           </div>
         </div>
       </div>
-      <!--/ Concurrent Work. -->
 
     </div>
-  </section>
+  </section> -->
 
 
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{conceptgraphs,
@@ -532,13 +428,13 @@
   year      = {2023},
 }</code></pre>
     </div>
-  </section>
+  </section> -->
 
 
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
-        <a class="icon-link" href="./assets/pdf/2023-ConceptGraphs.pdf">
+        <a class="icon-link" href="./assets/pdf/_ECCV2024_EgoLifter.pdf">
           <i class="fas fa-file-pdf"></i>
         </a>
         <a class="icon-link" href="https://github.com/concept-graphs" class="external-link" disabled>
