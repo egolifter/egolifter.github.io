@@ -178,23 +178,43 @@
         </h3>
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item">
-            <video poster="" id="interactive-feat-vol-3-1" autoplay controls muted loop playsinline height="67%">
+            <video poster="" id="interactive-feat-vol-3-1" autoplay controls muted loop playsinline height="55%">
               <source src="static/videos/interactive-feat-vol-3-1.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item">
-            <video poster="" id="interactive-feat-vol-3-2" autoplay controls muted loop playsinline height="67%">
+            <video poster="" id="interactive-feat-vol-3-2" autoplay controls muted loop playsinline height="55%">
               <source src="static/videos/interactive-feat-vol-3-2.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item">
-            <video poster="" id="interactive-feat-vol-3-3" autoplay controls muted loop playsinline height="67%">
+            <video poster="" id="interactive-feat-vol-3-3" autoplay controls muted loop playsinline height="55%">
               <source src="static/videos/interactive-feat-vol-3-3.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item">
-            <video poster="" id="interactive-feat-vol-3-4" autoplay controls muted loop playsinline height="67%">
+            <video poster="" id="interactive-feat-vol-3-4" autoplay controls muted loop playsinline height="55%">
               <source src="static/videos/interactive-feat-vol-3-4.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="interactive-feat-vol-2-1" autoplay controls muted loop playsinline height="55%">
+              <source src="static/videos/interactive-feat-vol-2-1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="interactive-feat-vol-2-2" autoplay controls muted loop playsinline height="55%">
+              <source src="static/videos/interactive-feat-vol-2-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="interactive-feat-vol-2-3" autoplay controls muted loop playsinline height="55%">
+              <source src="static/videos/interactive-feat-vol-2-3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="interactive-feat-vol-2-4" autoplay controls muted loop playsinline height="55%">
+              <source src="static/videos/interactive-feat-vol-2-4.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -256,46 +276,34 @@
       </div>
 
 
-      <!-- <div class="columns is-centered">
+      <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">Re-localization</h2>
-            <div class="interpolation-image-wrapper-zero-shot">
-              <video poster="" id="snoopy" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/particle_filter.mp4" type="video/mp4">
+            <h2 class="title is-3">Experiments</h2>
+            <p>
+              We qualitatively evaluate <span class="coolname">EgoLifter</span> on the <a href="https://www.projectaria.com/datasets/adt/">Aria Digital Twin</a> (ADT) dataset, and compare the following variants. 
+            </p>
+            <ul>
+              <li><span class="coolname">EgoLifter</span>: Our proposed full method</li>
+              <li><span class="coolname">EgoLifter</span>-Static: <span class="coolname">EgoLifter</span> with the transient prediction network disabled, and a vanilla static 3DGS is learned to reconstruct the scene. </li>
+              <li><span class="coolname">EgoLifter</span>-Dynamic: <span class="coolname">EgoLifter</span> using an dynamic variant of 3DGS, instead of the transient prediction network to handle the dynamics in the scene. </li>
+            </ul>
+            <div class="qual-video-adt">
+              <video poster="" id="snoopy" controls muted loop playsinline height="100%">
+                <source src="static/videos/compare_3_faster-meal132-seen.mp4" type="video/mp4">
               </video>
             </div>
             <p>
-              We emply <span class="coolname">ConceptGraphs</span> to localize the robot in a previously mapped
-              environment. Each object encodes a CLIP embedding, which is employed in a landmark-based particle-filter
-              that uses cosine similarity to compute particle weights. Within a few iterations, the robot localizes
-              accurately. In our explainer video, we also demonstrate mapping newly-detected objects that were not
-              present in the original map.
+              We also compare <span class="coolname">EgoLifter</span> with <a href="https://arxiv.org/abs/2312.00732">Gaussian Grouping</a>, a concurrent work that also learns instance features in 3DGS, but uses a video tracker for instance association rather than contrastive learning.
             </p>
-          </div>
-        </div>
-
-        <div class="column">
-          <h2 class="title is-3">Text queries via CLIP or GPT-4</h2>
-          <div class="columns is-centered">
-            <div class="column content">
-              <video poster="" id="snoopy" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/nasa-both.mp4" type="video/mp4">
+            <div class="qual-video-adt">
+              <video poster="" id="snoopy" controls muted loop playsinline height="100%" width="75%">
+                <source src="static/videos/compare_gg_less-meal132-seen.mp4" type="video/mp4">
               </video>
-              <p>
-                We demonstrate the ability of <span class="coolname">ConceptGraphs</span> to answer open-set text
-                queries. Each object in the scene graphs contains an associated CLIP embedding (fused from multi-view
-                images), as well as a text caption. While the CLIP embeddings work well across a wide range of queries,
-                they fail when the queries reference multiple concepts, involve negation, or complex composition. We may
-                also use LLMs (here, GPT-4) to find objects that address the text query. This approach performs better,
-                especially on complex queries, but requires access to an LLM at inference time (while the CLIP
-                text-query approach is easily deployable on CPUs on-board the robot).
-              </p>
             </div>
-
           </div>
         </div>
-      </div> -->
+      </div>
 
     </div>
   </section>

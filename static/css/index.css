@@ -172,3 +172,10 @@ body {
   margin-top: 25px ;
   /* margin-bottom: 100px; */
 }
+
+.qual-video-adt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure the div takes up full height */
+}
