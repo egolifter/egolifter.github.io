@@ -163,7 +163,7 @@
           <source src="./static/videos/eccv24-egolifter-teaser-animate-compress.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle has-text-centered">
-          Taking an egocentric video as input, <span class="coolname">EgoLifter</span> builds 3D Gaussian models that can be decomposed into open-vocabulary object instances.
+          <span class="coolname">EgoLifter</span> takes an egocentric video as input and lifts 2D instance segmentation results to 3D by contrastive learning. The results are 3D Gaussian models that can be decomposed into individual object instances by querying or clustering. 
         </h2>
       </div>
     </div>
@@ -174,8 +174,11 @@
     <div class="hero-body">
       <div class="container">
         <h3 class="title is-4 has-text-centered">
-          Interactive 3D segmentation by point query
+          Interactive 3D Segmentation
         </h3>
+        <!-- <p>
+          <span class="coolname">EgoLifter</span> augments 3D Gaussians with feature vectors and encode object identity using contrastive learning. Individual 3D objects can therefore be extracted by click-query or clustering. 
+        </p> -->
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item">
             <video poster="" id="interactive-feat-vol-3-1" autoplay controls muted loop playsinline height="55%">
@@ -264,7 +267,7 @@
           <h2 class="title is-3">Approach</h2>
           <div class="content has-text-justified">
             <p>
-              <span class="coolname">EgoLifter</span> solves 3D reconstruction and open-world segmentation simultaneously from egocentric videos. <span class="coolname">EgoLifter</span> augments 3D Gaussian Splatting with instance features and lifts open-world 2D segmentation by contrastive learning, where 3D Gaussians belong to the same objects are learned to have similar features. In this way, <span class="coolname">EgoLifter</span> solves the multi-view mask association problem and establishes a consistent 3D representation that can be decomposed into object instances. 
+              <span class="coolname">EgoLifter</span> solves 3D reconstruction and open-world segmentation simultaneously from egocentric videos. <span class="coolname">EgoLifter</span> augments 3D Gaussian Splatting with instance features and lifts open-world 2D segmentation by contrastive learning, where 3D Gaussians belonging to the same objects are learned to have similar features. In this way, <span class="coolname">EgoLifter</span> solves the multi-view mask association problem and establishes a consistent 3D representation that can be decomposed into object instances. 
             </p>
             <p>
               Naive 3D reconstruction from egocentric videos creates a lot of "floaters" in the reconstruction and leads to blurry rendered images and erroneous instance features (bottom right). <span class="coolname">EgoLifter</span> tackles this problem using a transient prediction network, which predicts a probability mask of transient objects in the image and guides the reconstruction process. In this way, <span class="coolname">EgoLifter</span> gets a much cleaner reconstruction of the static background in both RGB and feature space (top right), which in turn leads to better object decomposition of 3D scenes. 
@@ -281,26 +284,42 @@
           <div class="content">
             <h2 class="title is-3">Experiments</h2>
             <p>
-              We qualitatively evaluate <span class="coolname">EgoLifter</span> on the <a href="https://www.projectaria.com/datasets/adt/">Aria Digital Twin</a> (ADT) dataset, and compare the following variants. 
+              Egocentric videos capture frequent human-object interaction and thus contain a huge amount of dynamic motion with challenging occlusions. <span class="coolname">EgoLifter</span> is designed to provide useful scene understanding from egocentric data by extracting hundreds of different objects while being robust to sparse and rapid dynamics.
+            </p>
+            <p>
+              To demonstrate this, we compare the following variants in our experiments: 
             </p>
             <ul>
               <li><span class="coolname">EgoLifter</span>: Our proposed full method</li>
-              <li><span class="coolname">EgoLifter</span>-Static: <span class="coolname">EgoLifter</span> with the transient prediction network disabled, and a vanilla static 3DGS is learned to reconstruct the scene. </li>
-              <li><span class="coolname">EgoLifter</span>-Dynamic: <span class="coolname">EgoLifter</span> using an dynamic variant of 3DGS, instead of the transient prediction network to handle the dynamics in the scene. </li>
+              <li><span class="coolname">EgoLifter</span>-Static: a baseline with the transient prediction network disabled. A vanilla static 3DGS is learned to reconstruct the scene. </li>
+              <li><span class="coolname">EgoLifter</span>-Dynamic: a baseline using a dynamic variant of 3DGS, instead of the transient prediction network to handle the dynamics in the scene. </li>
+              <li><a href="https://arxiv.org/abs/2312.00732">Gaussian Grouping</a>: a concurrent work that also learns instance features in 3DGS. However, Gaussian Grouping uses a video tracker to solve instance identities rather than contrastive learning. </li>
             </ul>
+            <p>
+              Here is the qualitative evaluation of <span class="coolname">EgoLifter</span> on the <a href="https://www.projectaria.com/datasets/adt/">Aria Digital Twin</a> (ADT) dataset. Please note that baseline puts ghostly floaters on the region of transient objects, but <span class="coolname">EgoLifter</span> filters them out and gives a cleaner reconstruction of both RGB images and feature maps. 
+            </p>
             <div class="qual-video-adt">
-              <video poster="" id="snoopy" controls muted loop playsinline height="100%">
+              <video poster="" id="snoopy" controls muted loop playsinline height="100%" width="100%">
                 <source src="static/videos/compare_3_faster-meal132-seen.mp4" type="video/mp4">
               </video>
             </div>
             <p>
-              We also compare <span class="coolname">EgoLifter</span> with <a href="https://arxiv.org/abs/2312.00732">Gaussian Grouping</a>, a concurrent work that also learns instance features in 3DGS, but uses a video tracker for instance association rather than contrastive learning.
+              Here is the qualitative comparison with Gaussian Grouping. Note that <span class="coolname">EgoLifter</span> has a cleaner feature map probably because our contrastive loss helps learn more cohesive identity features than the classification loss used in Gaussian Grouping. 
             </p>
             <div class="qual-video-adt">
               <video poster="" id="snoopy" controls muted loop playsinline height="100%" width="75%">
                 <source src="static/videos/compare_gg_less-meal132-seen.mp4" type="video/mp4">
               </video>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title is-4">More Qualitative Results</h3>
+            
           </div>
         </div>
       </div>

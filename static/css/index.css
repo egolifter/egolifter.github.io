@@ -138,9 +138,6 @@ body {
   border-radius: 5px;
 }
 
-.interpolation-video-column {
-}
-
 .interpolation-panel .slider {
   margin: 0 !important;
 }
@@ -178,4 +175,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%; /* Ensure the div takes up full height */
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
