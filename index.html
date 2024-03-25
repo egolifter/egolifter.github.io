@@ -296,10 +296,10 @@
               <li><a href="https://arxiv.org/abs/2312.00732">Gaussian Grouping</a>: a concurrent work that also learns instance features in 3DGS. However, Gaussian Grouping uses a video tracker to solve instance identities rather than contrastive learning. </li>
             </ul>
             <p>
-              Here is the qualitative evaluation of <span class="coolname">EgoLifter</span> on the <a href="https://www.projectaria.com/datasets/adt/">Aria Digital Twin</a> (ADT) dataset. Please note that baseline puts ghostly floaters on the region of transient objects, but <span class="coolname">EgoLifter</span> filters them out and gives a cleaner reconstruction of both RGB images and feature maps. 
+              Here are the qualitative results of <span class="coolname">EgoLifter</span> on the <a href="https://www.projectaria.com/datasets/adt/">Aria Digital Twin</a> (ADT) dataset. Quantitative evaluation results and more analysis can be found in the paper. Note that baseline puts ghostly floaters on the region of transient objects, but <span class="coolname">EgoLifter</span> filters them out and gives a cleaner reconstruction of both RGB images and feature maps. 
             </p>
             <div class="qual-video-adt">
-              <video poster="" id="snoopy" controls muted loop playsinline height="100%" width="100%">
+              <video poster="" controls muted loop playsinline height="100%" width="100%">
                 <source src="static/videos/compare_3_faster-meal132-seen.mp4" type="video/mp4">
               </video>
             </div>
@@ -307,19 +307,10 @@
               Here is the qualitative comparison with Gaussian Grouping. Note that <span class="coolname">EgoLifter</span> has a cleaner feature map probably because our contrastive loss helps learn more cohesive identity features than the classification loss used in Gaussian Grouping. 
             </p>
             <div class="qual-video-adt">
-              <video poster="" id="snoopy" controls muted loop playsinline height="100%" width="75%">
+              <video poster="" controls muted loop playsinline height="100%" width="75%">
                 <source src="static/videos/compare_gg_less-meal132-seen.mp4" type="video/mp4">
               </video>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column">
-          <div class="content">
-            <h3 class="title is-4">More Qualitative Results</h3>
-            
           </div>
         </div>
       </div>
@@ -328,45 +319,66 @@
   </section>
 
 
-  <!-- <section class="section">
+  <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
-
         <div class="column">
           <div class="content">
-            <h3 class="title is-3">Queries with both text and image context</h3>
-            <video poster="" id="snoopy" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/jackal_visual_mj.mp4" type="video/mp4">
-            </video>
+            <h2 class="title is-3">More Qualitative Results</h2>
             <p>
-              We can also handle text queries that include context from an additional image. In this example, we
-              the robot looks at an image of Michael Jordan, and is given a text query "something this guy would play
-              with". It is able to locate the basketball in the scene.
+              Here are more qualitative results of <span class="coolname">EgoLifter</span> on the <a href="https://ego-exo4d-data.org/">Ego-Exo4D</a> dataset and <a href="https://www.projectaria.com/datasets/aea/">Aria Everyday Activities</a> dataset.
             </p>
           </div>
         </div>
+      </div>
+      
+      <div class="columns is-centered">
 
         <div class="column">
-          <h3 class="title is-3">Traversability puzzle</h3>
           <div class="columns is-centered">
             <div class="column content">
-              <video poster="" id="snoopy" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/jackal-traversability.mp4" type="video/mp4">
+              <video poster="" id="snoopy" controls muted loop playsinline height="100%" width="100%">
+                <source src="static/videos/compare_path-egoexo-cmu_bike16-trim.mp4" type="video/mp4">
               </video>
-              <p>
-                The Jackal robot solving a traversability challenge. All paths to the goal are obstructed by objects. We
-                query an LLM to identify which objects can be safely pushed or traversed by the robot (green) and which
-                objects would be too heavy or hinder the robot’s movement (red). The LLM relies on the ConceptGraphs
-                node captions to make traversability predictions and we add the non-traversable objects to the Jackal
-                costmap for path planning. The Jackal successfully reaches the goal by going through a curtain and
-                pushing a basketball, while also avoiding contact with bricks, an iron dumbbell, and a flower pot.
-              </p>
             </div>
           </div>
         </div>
+
+        <div class="column">
+          <div class="columns is-centered">
+            <div class="column content">
+              <video poster="" id="snoopy" controls muted loop playsinline height="100%" width="100%">
+                <source src="static/videos/compare_path-sfu_cooking025.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video poster="" id="snoopy" controls muted loop playsinline height="100%" width="100%">
+              <source src="static/videos/compare_path-aea-loc2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="columns is-centered">
+            <div class="column content">
+              <video poster="" id="snoopy" controls muted loop playsinline height="100%" width="100%">
+                <source src="static/videos/compare_path-aea-loc4.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
-  </section> -->
+  </section>
 
 
   <!-- <section class="section" id="concurrent work">
