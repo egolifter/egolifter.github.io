@@ -4,12 +4,12 @@ This is the repository that contains source code for the [EgoLifter website](htt
 
 # # BibTeX entry for ConceptGraphs
 ```
-@article{conceptgraphs,
+@article{gu2024egolifter,
   author    = {Gu, Qiao and Lv, Zhaoyang and Frost, Duncan and Green, Simon and Straub, Julian and Sweeney, Chris},
   title     = {EgoLifter: Open-world 3D Segmentation for Egocentric Perception},
-  journal   = {arXiv},
+  journal   = {arXiv preprint arXiv:2403.18118},
   year      = {2024},
-} 
+}
 ```
 
 # Website License
