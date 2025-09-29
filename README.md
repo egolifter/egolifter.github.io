@@ -2,13 +2,15 @@
 
 This is the repository that contains source code for the [EgoLifter website](https://egolifter.github.io/).
 
-# # BibTeX entry for ConceptGraphs
+# # BibTeX entry for EgoLifter
 ```
-@article{gu2024egolifter,
-  author    = {Gu, Qiao and Lv, Zhaoyang and Frost, Duncan and Green, Simon and Straub, Julian and Sweeney, Chris},
-  title     = {EgoLifter: Open-world 3D Segmentation for Egocentric Perception},
-  journal   = {arXiv preprint arXiv:2403.18118},
-  year      = {2024},
+@inproceedings{gu2024egolifter,
+  title={Egolifter: Open-world 3d segmentation for egocentric perception},
+  author={Gu, Qiao and Lv, Zhaoyang and Frost, Duncan and Green, Simon and Straub, Julian and Sweeney, Chris},
+  booktitle={European Conference on Computer Vision},
+  pages={382--400},
+  year={2024},
+  organization={Springer}
 }
 ```
 
